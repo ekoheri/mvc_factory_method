@@ -18,11 +18,12 @@ class mymodel extends products {
 	function insertMahasiswa($data){
 		return $this->db->query("INSERT INTO tabel_mahasiswa (nim, nama, jurusan) VALUES ('".$data['nim']."','".$data['nama']."','".$data['jurusan']."')");
 	}
-	function updateMahasiswa($data, $where){
-		return $this->db->update('tabel_mahasiswa', $data, $where);
+	function updateMahasiswa($data){
+		return $this->db->query("UPDATE tabel_mahasiswa SET nama = '".$data['nama']."',
+jurusan = '".$data['jurusan']."' WHERE nim = '".$data['nim']."';");
 	}
-	function deleteMahasiswa($nim){
-		return $this->db->query("DELETE FROM tabel_mahasiswa WHERE nim ='$nim'");
+	function deleteMahasiswa($data){
+		return $this->db->query("DELETE FROM tabel_mahasiswa WHERE nim ='".$data['nim']."'");
 	}
 }
 ?>

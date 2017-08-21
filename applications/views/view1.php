@@ -3,7 +3,7 @@
 <title>Welcome</title>
 </head>
 <body>
-<h1>Welcome to <?php echo $nama;?> MVC</h1>
+<h1>Welcome to <?php echo $nama_test;?> MVC</h1>
 <h2>Daftar Mahasiswa</h2>
 <table border="1">
 <tr>

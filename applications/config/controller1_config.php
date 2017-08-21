@@ -19,4 +19,12 @@ $config['view'] = array(
 		'show' => 'load'
 	)
 );
+
+$config['parser'] = array(
+	'path' => 'libraries/parser_libraries.php',
+	'class' => 'parser_libraries',
+	'method' => array (
+		'show' => 'parse'
+	)
+);
 ?>
